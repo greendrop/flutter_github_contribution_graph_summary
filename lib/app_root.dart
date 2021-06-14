@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:github_contribution_graph_summary/pages/not_found_page.dart';
 import 'package:github_contribution_graph_summary/pages/root_page.dart';
 import 'package:github_contribution_graph_summary/config/app_config.dart';
 import 'package:routemaster/routemaster.dart';
@@ -34,8 +35,12 @@ class AppRootMain extends HookWidget {
         ),
         routeInformationParser: const RoutemasterParser(),
         routerDelegate: RoutemasterDelegate(
-            routesBuilder: (context) => RouteMap(routes: {
-                  '/': (_) => MaterialPage<Widget>(child: RootPage())
-                })));
+            routesBuilder: (context) => RouteMap(
+                    onUnknownRoute: (_) {
+                      return MaterialPage<Widget>(child: NotFoundPage());
+                    },
+                    routes: {
+                      '/': (_) => MaterialPage<Widget>(child: RootPage())
+                    })));
   }
 }
