@@ -5,12 +5,14 @@ import 'package:routemaster/routemaster.dart';
 class RootBody extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    void replaceRouteSummary() {
+      Routemaster.of(context).replace('/summary');
+    }
+
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         ElevatedButton(
-            onPressed: () {
-              Routemaster.of(context).replace('/summary');
-            },
+            onPressed: () => replaceRouteSummary,
             child: const Text('Create Summary'))
       ])
     ]);

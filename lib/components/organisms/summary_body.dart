@@ -15,6 +15,16 @@ class SummaryBody extends HookWidget {
 
     final name = useState('');
 
+    void onChangedName(String value) {
+      name.value = value;
+    }
+
+    void onPressedAdd() {
+      summaryListStateNotifier
+          .addGithubAccount(GithubAccount(login: name.value));
+      name.value = '';
+    }
+
     return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
       Expanded(
           child: ListView(children: [
@@ -23,12 +33,8 @@ class SummaryBody extends HookWidget {
       ])),
       Container(
           margin: const EdgeInsets.all(20),
-          child: SummaryAddForm(onChangedName: (String value) {
-            name.value = value;
-          }, onPressedAdd: () {
-            summaryListStateNotifier
-                .addGithubAccount(GithubAccount(login: name.value));
-          }))
+          child: SummaryAddForm(
+              onChangedName: onChangedName, onPressedAdd: onPressedAdd))
     ]);
   }
 }

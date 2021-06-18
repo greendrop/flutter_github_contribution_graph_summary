@@ -5,6 +5,10 @@ import 'package:routemaster/routemaster.dart';
 class DrawerBody extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    void replaceRouteSummary() {
+      Routemaster.of(context).replace('/summary');
+    }
+
     return Drawer(
         child: ListView(padding: EdgeInsets.zero, children: <Widget>[
       const DrawerHeader(
@@ -21,9 +25,7 @@ class DrawerBody extends HookWidget {
       ),
       ListTile(
         title: const Text('Summary'),
-        onTap: () {
-          Routemaster.of(context).replace('/summary');
-        },
+        onTap: replaceRouteSummary,
       ),
     ]));
   }
