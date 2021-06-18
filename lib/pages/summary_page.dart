@@ -2,9 +2,9 @@ import 'package:breakpoint/breakpoint.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:github_contribution_graph_summary/components/organisms/drawer_body.dart';
-import 'package:github_contribution_graph_summary/components/organisms/root_body.dart';
+import 'package:github_contribution_graph_summary/components/organisms/summary_body.dart';
 
-class RootPage extends HookWidget {
+class SummaryPage extends HookWidget {
   final _title = 'GitHub Contribution Graph Summay';
 
   @override
@@ -14,12 +14,13 @@ class RootPage extends HookWidget {
       if (breakpoint.window >= WindowSize.medium) {
         return Scaffold(
             appBar: AppBar(title: Text(_title)),
-            body: Row(children: [DrawerBody(), Expanded(child: RootBody())]));
+            body:
+                Row(children: [DrawerBody(), Expanded(child: SummaryBody())]));
       } else {
         return Scaffold(
             appBar: AppBar(title: Text(_title)),
             drawer: DrawerBody(),
-            body: RootBody());
+            body: SummaryBody());
       }
     });
   }

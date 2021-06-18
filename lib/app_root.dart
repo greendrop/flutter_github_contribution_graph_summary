@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:github_contribution_graph_summary/pages/not_found_page.dart';
 import 'package:github_contribution_graph_summary/pages/root_page.dart';
 import 'package:github_contribution_graph_summary/config/app_config.dart';
+import 'package:github_contribution_graph_summary/pages/summary_page.dart';
 import 'package:routemaster/routemaster.dart';
 
 class AppRoot extends HookWidget {
@@ -18,7 +19,7 @@ class AppRoot extends HookWidget {
       child: Banner(
           color: Colors.red,
           message: appConfig.env.toUpperCase(),
-          location: BannerLocation.topStart,
+          location: BannerLocation.bottomStart,
           child: AppRootMain()),
     );
   }
@@ -40,7 +41,9 @@ class AppRootMain extends HookWidget {
                       return MaterialPage<Widget>(child: NotFoundPage());
                     },
                     routes: {
-                      '/': (_) => MaterialPage<Widget>(child: RootPage())
+                      '/': (_) => MaterialPage<Widget>(child: RootPage()),
+                      '/summary': (_) =>
+                          MaterialPage<Widget>(child: SummaryPage())
                     })));
   }
 }

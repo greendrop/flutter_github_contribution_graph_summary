@@ -8,6 +8,7 @@ class AppConfig {
 
   String env = 'local';
   bool displayEnv = true;
+  String githubAccessToken = '';
 
   Future<void> load() async {
     await dotenv.load(fileName: '.env');
@@ -15,6 +16,7 @@ class AppConfig {
     env = '';
     env = dotenv.env['ENV'].toString();
     displayEnv = env != 'prod';
+    githubAccessToken = dotenv.env['GITHUB_ACCESS_TOKEN'].toString();
 
     switch (env) {
       case 'prod':
