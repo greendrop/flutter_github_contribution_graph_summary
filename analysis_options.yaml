@@ -5,3 +5,4 @@ analyzer:
   exclude:
     - lib/**/*.freezed.dart
     - lib/**/*.g.dart
+    - lib/graphql/**/api.graphql.dart

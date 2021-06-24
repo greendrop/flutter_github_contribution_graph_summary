@@ -31,10 +31,15 @@ class SummaryAddForm extends HookWidget {
       Expanded(
           child: TextFormField(
         controller: nameTextEditingController,
-        decoration: const InputDecoration(labelText: 'GitHub Account Name'),
+        decoration: const InputDecoration(labelText: 'GitHub User Name'),
       )),
       TextButton(
-          onPressed: nameTextEditingController.text == '' ? null : onPressedAdd,
+          onPressed: nameTextEditingController.text == ''
+              ? null
+              : () {
+                  onPressedAdd();
+                  nameTextEditingController.text = '';
+                },
           child: const Text('ADD'))
     ]);
   }

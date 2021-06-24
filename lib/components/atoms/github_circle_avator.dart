@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class GithubAvator extends HookWidget {
-  const GithubAvator({required this.avatorUrl});
+class GithubCircleAvator extends HookWidget {
+  const GithubCircleAvator({required this.avatorUrl});
 
   final String avatorUrl;
 

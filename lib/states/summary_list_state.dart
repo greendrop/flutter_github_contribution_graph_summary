@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:github_contribution_graph_summary/entities/github_account.dart';
+import 'package:github_contribution_graph_summary/graphql/github/api.dart';
+import 'package:github_contribution_graph_summary/repositories/user_repository.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 part 'summary_list_state.freezed.dart';
@@ -7,7 +8,7 @@ part 'summary_list_state.freezed.dart';
 @freezed
 class SummaryListState with _$SummaryListState {
   factory SummaryListState(
-          {@Default(<GithubAccount>[]) List<GithubAccount> githubAccounts}) =
+          {@Default(<User$Query$User>[]) List<User$Query$User> githubUsers}) =
       _SummaryListState;
   const SummaryListState._();
 }
@@ -15,12 +16,10 @@ class SummaryListState with _$SummaryListState {
 class SummaryListStateNotifier extends StateNotifier<SummaryListState> {
   SummaryListStateNotifier() : super(SummaryListState());
 
-  void setGithubAccounts(List<GithubAccount> githubAccounts) {
-    state = state.copyWith(githubAccounts: githubAccounts);
-  }
+  Future<void> addGithubUser(String login) async {
+    final repository = UserRepository();
 
-  void addGithubAccount(GithubAccount githubAccount) {
-    state = state
-        .copyWith(githubAccounts: [...state.githubAccounts, githubAccount]);
+    final user = await repository.fetchUser(login);
+    state = state.copyWith(githubUsers: [...state.githubUsers, user]);
   }
 }

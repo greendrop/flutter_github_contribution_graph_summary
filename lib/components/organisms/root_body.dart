@@ -12,8 +12,7 @@ class RootBody extends HookWidget {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         ElevatedButton(
-            onPressed: () => replaceRouteSummary,
-            child: const Text('Create Summary'))
+            onPressed: replaceRouteSummary, child: const Text('Create Summary'))
       ])
     ]);
   }

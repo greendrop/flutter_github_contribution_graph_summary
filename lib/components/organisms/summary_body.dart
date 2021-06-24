@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:github_contribution_graph_summary/components/molecules/summary_add_form.dart';
 import 'package:github_contribution_graph_summary/components/molecules/summary_list_item.dart';
-import 'package:github_contribution_graph_summary/entities/github_account.dart';
 import 'package:github_contribution_graph_summary/states/state_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -20,16 +19,15 @@ class SummaryBody extends HookWidget {
     }
 
     void onPressedAdd() {
-      summaryListStateNotifier
-          .addGithubAccount(GithubAccount(login: name.value));
+      summaryListStateNotifier.addGithubUser(name.value);
       name.value = '';
     }
 
     return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
       Expanded(
           child: ListView(children: [
-        ...summaryListState.githubAccounts
-            .map((item) => SummaryListItem(githubAccount: item))
+        ...summaryListState.githubUsers
+            .map((item) => SummaryListItem(githubUser: item))
       ])),
       Container(
           margin: const EdgeInsets.all(20),

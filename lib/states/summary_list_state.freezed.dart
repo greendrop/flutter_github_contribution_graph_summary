@@ -17,9 +17,9 @@ class _$SummaryListStateTearOff {
   const _$SummaryListStateTearOff();
 
   _SummaryListState call(
-      {List<GithubAccount> githubAccounts = const <GithubAccount>[]}) {
+      {List<User$Query$User> githubUsers = const <User$Query$User>[]}) {
     return _SummaryListState(
-      githubAccounts: githubAccounts,
+      githubUsers: githubUsers,
     );
   }
 }
@@ -29,7 +29,7 @@ const $SummaryListState = _$SummaryListStateTearOff();
 
 /// @nodoc
 mixin _$SummaryListState {
-  List<GithubAccount> get githubAccounts => throw _privateConstructorUsedError;
+  List<User$Query$User> get githubUsers => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SummaryListStateCopyWith<SummaryListState> get copyWith =>
@@ -41,7 +41,7 @@ abstract class $SummaryListStateCopyWith<$Res> {
   factory $SummaryListStateCopyWith(
           SummaryListState value, $Res Function(SummaryListState) then) =
       _$SummaryListStateCopyWithImpl<$Res>;
-  $Res call({List<GithubAccount> githubAccounts});
+  $Res call({List<User$Query$User> githubUsers});
 }
 
 /// @nodoc
@@ -55,13 +55,13 @@ class _$SummaryListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? githubAccounts = freezed,
+    Object? githubUsers = freezed,
   }) {
     return _then(_value.copyWith(
-      githubAccounts: githubAccounts == freezed
-          ? _value.githubAccounts
-          : githubAccounts // ignore: cast_nullable_to_non_nullable
-              as List<GithubAccount>,
+      githubUsers: githubUsers == freezed
+          ? _value.githubUsers
+          : githubUsers // ignore: cast_nullable_to_non_nullable
+              as List<User$Query$User>,
     ));
   }
 }
@@ -73,7 +73,7 @@ abstract class _$SummaryListStateCopyWith<$Res>
           _SummaryListState value, $Res Function(_SummaryListState) then) =
       __$SummaryListStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<GithubAccount> githubAccounts});
+  $Res call({List<User$Query$User> githubUsers});
 }
 
 /// @nodoc
@@ -89,13 +89,13 @@ class __$SummaryListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? githubAccounts = freezed,
+    Object? githubUsers = freezed,
   }) {
     return _then(_SummaryListState(
-      githubAccounts: githubAccounts == freezed
-          ? _value.githubAccounts
-          : githubAccounts // ignore: cast_nullable_to_non_nullable
-              as List<GithubAccount>,
+      githubUsers: githubUsers == freezed
+          ? _value.githubUsers
+          : githubUsers // ignore: cast_nullable_to_non_nullable
+              as List<User$Query$User>,
     ));
   }
 }
@@ -103,31 +103,30 @@ class __$SummaryListStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SummaryListState extends _SummaryListState {
-  _$_SummaryListState({this.githubAccounts = const <GithubAccount>[]})
+  _$_SummaryListState({this.githubUsers = const <User$Query$User>[]})
       : super._();
 
-  @JsonKey(defaultValue: const <GithubAccount>[])
+  @JsonKey(defaultValue: const <User$Query$User>[])
   @override
-  final List<GithubAccount> githubAccounts;
+  final List<User$Query$User> githubUsers;
 
   @override
   String toString() {
-    return 'SummaryListState(githubAccounts: $githubAccounts)';
+    return 'SummaryListState(githubUsers: $githubUsers)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SummaryListState &&
-            (identical(other.githubAccounts, githubAccounts) ||
+            (identical(other.githubUsers, githubUsers) ||
                 const DeepCollectionEquality()
-                    .equals(other.githubAccounts, githubAccounts)));
+                    .equals(other.githubUsers, githubUsers)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(githubAccounts);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(githubUsers);
 
   @JsonKey(ignore: true)
   @override
@@ -136,12 +135,12 @@ class _$_SummaryListState extends _SummaryListState {
 }
 
 abstract class _SummaryListState extends SummaryListState {
-  factory _SummaryListState({List<GithubAccount> githubAccounts}) =
+  factory _SummaryListState({List<User$Query$User> githubUsers}) =
       _$_SummaryListState;
   _SummaryListState._() : super._();
 
   @override
-  List<GithubAccount> get githubAccounts => throw _privateConstructorUsedError;
+  List<User$Query$User> get githubUsers => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SummaryListStateCopyWith<_SummaryListState> get copyWith =>

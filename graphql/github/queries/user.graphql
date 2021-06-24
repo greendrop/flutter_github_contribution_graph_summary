@@ -1,0 +1,19 @@
+query user($login:String!) {
+  user(login: $login){
+    login
+    avatarUrl
+    contributionsCollection {
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            color
+            contributionCount
+            contributionLevel
+            date
+          }
+        }
+      }
+    }
+  }
+}
