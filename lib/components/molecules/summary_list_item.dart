@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:github_contribution_graph_summary/components/atoms/github_circle_avator.dart';
+import 'package:github_contribution_graph_summary/components/molecules/summaly_list_item_chart.dart';
 import 'package:github_contribution_graph_summary/graphql/github/api.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -28,7 +29,12 @@ class SummaryListItem extends HookWidget {
                       fontWeight: FontWeight.bold, fontSize: 20)),
             ),
           ]),
-        )
+        ),
+      ]),
+      Column(children: [
+        Container(
+            margin: const EdgeInsets.all(10),
+            child: SummaryListItemChart(githubUser: githubUser))
       ])
     ]));
   }

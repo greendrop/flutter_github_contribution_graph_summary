@@ -23,6 +23,7 @@ environment:
 dependencies:
   breakpoint: ^1.2.0
   cupertino_icons: ^1.0.2
+  fl_chart: ^0.36.2
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.0.0
