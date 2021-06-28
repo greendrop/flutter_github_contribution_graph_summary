@@ -50,3 +50,6 @@ app.*.map.json
 
 # dotenv
 .env
+
+# firebase
+.firebase/
