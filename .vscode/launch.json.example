@@ -14,7 +14,7 @@
                 "--flavor",
                 "local",
                 "--dart-define=FLAVOR=local",
-                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+                "--dart-define=GITHUB_ACCESS_TOKEN=XXXXXX",
             ],
         },
         {
@@ -27,7 +27,7 @@
                 "--flavor",
                 "local",
                 "--dart-define=FLAVOR=local",
-                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+                "--dart-define=GITHUB_ACCESS_TOKEN=XXXXXX",
             ],
         },
         {
@@ -40,7 +40,7 @@
                 "--flavor",
                 "prod",
                 "--dart-define=FLAVOR=prod",
-                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+                "--dart-define=GITHUB_ACCESS_TOKEN=XXXXXX",
             ],
         },
         {
@@ -53,7 +53,7 @@
                 "--flavor",
                 "prod",
                 "--dart-define=FLAVOR=prod",
-                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+                "--dart-define=GITHUB_ACCESS_TOKEN=XXXXXX",
             ],
         },
     ]
