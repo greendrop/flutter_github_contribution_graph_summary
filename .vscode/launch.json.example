@@ -1,0 +1,60 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "github_contribution_graph_summary Debug-Local",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--debug",
+                "--flavor",
+                "local",
+                "--dart-define=FLAVOR=local",
+                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+            ],
+        },
+        {
+            "name": "github_contribution_graph_summary Release-Local",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--release",
+                "--flavor",
+                "local",
+                "--dart-define=FLAVOR=local",
+                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+            ],
+        },
+        {
+            "name": "github_contribution_graph_summary Debug-Prod",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--debug",
+                "--flavor",
+                "prod",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+            ],
+        },
+        {
+            "name": "github_contribution_graph_summary Release-Prod",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--release",
+                "--flavor",
+                "prod",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=GITHUB_ACCESS_TOKEN=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",
+            ],
+        },
+    ]
+}

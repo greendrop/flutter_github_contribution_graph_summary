@@ -10,7 +10,7 @@ class AppRoot extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final appConfig = AppConfig();
-    if (!appConfig.displayEnv) {
+    if (!appConfig.displayFlavor) {
       return AppRootMain();
     }
 
@@ -18,7 +18,7 @@ class AppRoot extends HookWidget {
       textDirection: TextDirection.ltr,
       child: Banner(
           color: Colors.red,
-          message: appConfig.env.toUpperCase(),
+          message: appConfig.flavor.toUpperCase(),
           location: BannerLocation.bottomStart,
           child: AppRootMain()),
     );
