@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "github_contribution_graph_summary Debug-Local",
+            "name": "Debug-Local",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
@@ -18,7 +18,7 @@
             ],
         },
         {
-            "name": "github_contribution_graph_summary Release-Local",
+            "name": "Release-Local",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
@@ -31,7 +31,7 @@
             ],
         },
         {
-            "name": "github_contribution_graph_summary Debug-Prod",
+            "name": "Debug-Prod",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
@@ -44,7 +44,7 @@
             ],
         },
         {
-            "name": "github_contribution_graph_summary Release-Prod",
+            "name": "Release-Prod",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
